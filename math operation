@@ -1,0 +1,161 @@
+//This is a program of math operation
+
+//2016/3/7
+
+#include<iostream>
+
+#include<stdlib.h>
+
+#include<time.h>
+
+using namespace std;
+
+ 
+
+int a;//第一个数值
+
+int a1,a2;
+
+int b;//第二个数值
+
+int b1,b2;
+
+int item;
+
+int d;//结果
+
+int p;//判断整数与分数
+
+int y;//判断运算符
+
+char c[4];//运算符
+
+ 
+
+int main()
+
+{
+
+srand((int)time(NULL));
+
+ 
+
+c[0]='+';
+
+c[1]='-';
+
+c[2]='*';
+
+c[3]='÷'; 
+
+ 
+
+for(int i =0;i < 30;i++)//利用循环语句实现30次
+
+{
+
+//判断用分数还是整数
+
+p = (0+rand()%2);
+
+if(p == 0)
+
+{
+
+a = (0+rand()%100);
+
+y = (0 + rand()%4);
+
+if(y == 3)
+
+{
+
+b = (1 + rand()%100);
+
+}
+
+else
+
+{
+
+b = (0 + rand()%100);
+
+}
+
+cout << a << " " << c[y] << " " << b << " " << "="<<endl;
+
+}
+
+else 
+
+{
+
+a1 = (0 + rand()%100);
+
+a2 = (0 + rand()%100);
+
+if(a1 > a2)
+
+{
+
+item = a1;
+
+a1 = a2;
+
+a2 = item;
+
+}
+
+y = (0 + rand()%4);
+
+if(y == 3)
+
+{
+
+b1 = (1 + rand()%100);
+
+b2 = (1 + rand()%100);
+
+if(b1>b2)
+
+{
+
+item = b1;
+
+b1 = b2;
+
+b2 = item;
+
+}
+
+}
+
+else
+
+{
+
+b1 = (0+rand()%100);
+
+b2 = (1+rand()%100);
+
+if(b1>b2)
+
+{
+
+item = b1;
+
+b1 = b2;
+
+b2 = item;
+
+}
+
+}
+
+}
+
+cout << a1<<"/"<<a2<<" " <<c[y]<<" "<<" "<< b1 <<"/"<<b2 << " " <<"="<<endl;
+
+}
+
+}
